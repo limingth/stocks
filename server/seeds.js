@@ -289,7 +289,8 @@ Meteor.startup(function() {
   ];
 
 
-  if (Stocks.find({}).count() === 0) {
+  if (Stocks.find({}).count() < 10) {
+    Stocks.remove({});
     _(stocks).each(function (stock) {
       Stocks.insert({
         code: stock.code,
