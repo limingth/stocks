@@ -12,15 +12,44 @@
 </template>
 
 <template name="searchBox">
-  <div class="container">
-    <h1>额滴股神!</h1>
-    {{> esInput class="form-control" index="stocks" placeholder="Search..." }}
+  <!-- {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear pull-left button-positive">
+      {{> ionIcon icon='ios-search'}}
+    </button>
+  {{/contentFor}} -->
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">股神</h1>
+  {{/contentFor}}
 
-    <ul class="list-group">
-        {{#esEach index="stocks"}}
-            <li class="list-group-item"> {{name}} {{code}}, {{value}}</li>
-        {{/esEach}}
-    </ul>
+  {{#ionView}}
+    {{#ionContent}}
+    {{> esInput index="stocks" placeholder="Search..." }}
+    {{#ionList}}
+      {{#esEach index="stocks"}}
 
-  </div>
+        {{#ionItem iconLeft=true iconRight=true}}
+          <h2>{{code}} {{name}}</h2>
+          <p> {{value}} </p>
+        {{/ionItem}}
+      {{/esEach}}
+    {{/ionList}}
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>
+
+<template name="_stockItem">
+  {{#with stock}}
+    {{#ionItem iconLeft=true iconRight=true}}
+      {{> _voteButton}}
+      <h2>{{code}} {{name}}</h2>
+      <p>
+        {{value}}
+      </p>
+      <span class="comments-count">
+        {{numberOfComments}}
+        {{> ionIcon icon="ios-chatbubble" }}
+      </span>
+    {{/ionItem}}
+  {{/with}}
 </template>
