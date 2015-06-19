@@ -3,8 +3,6 @@
 </head>
 
 <body>
-  <h1>额滴股神!</h1>
-
   {{> searchBox}}
 </body>
 
@@ -14,11 +12,15 @@
 </template>
 
 <template name="searchBox">
-    {{> esInput index="stocks" placeholder="Search..." }}
+  <div class="container">
+    <h1>额滴股神!</h1>
+    {{> esInput class="form-control" index="stocks" placeholder="Search..." }}
 
-    <ul>
+    <ul class="list-group">
         {{#esEach index="stocks"}}
-            <li> {{name}} {{code}}, {{value}}</li>
+            <li class="list-group-item"> {{name}} {{code}}, {{value}}</li>
         {{/esEach}}
     </ul>
+
+  </div>
 </template>
