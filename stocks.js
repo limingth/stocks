@@ -27,7 +27,10 @@ if (Meteor.isClient) {
 
 Template.searchBox.helpers({
   lessthanzero: function (s) {
-    return s.value[0] == '-';
+    return s.value < 0;
+  },
+  parseValue: function(value) {
+    return value.toFixed(2) + "%";
   }
 });
 

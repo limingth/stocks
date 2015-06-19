@@ -42,14 +42,14 @@
             <div style="color:green">
               {{> ionIcon icon="arrow-graph-down-left"}}
               <span class="stock-stats">
-                <p style="color:green"> {{value}} </p>
+                <p style="color:green"> {{parseValue value}} </p>
               </span>
             </div>
           {{else}}
             <div style="color:red">
               {{> ionIcon icon="arrow-graph-up-right"}}
               <span class="stock-stats">
-                <p style="color:red"> {{value}} </p>
+                <p style="color:red"> {{parseValue value}} </p>
               </span>
             </div>
           {{/if}}
