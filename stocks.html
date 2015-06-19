@@ -37,7 +37,13 @@
 
         {{#ionItem iconLeft=true iconRight=true}}
           <h2>{{code}} {{name}}</h2>
-          <p> {{value}} </p>
+
+          {{#if lessthanzero this}}
+          <p style="color:green"> {{value}} </p>
+          {{else}}
+          <p style="color:red"> {{value}} </p>
+          {{/if}}
+
         {{/ionItem}}
       {{/esEach}}
     {{/ionList}}
