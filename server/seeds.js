@@ -1,34 +1,39 @@
 Meteor.startup(function() {
   var stocks = [
     {
-      code: '600001',
-      name: '机场',
+      code: '600230',
+      name: '沧州大化',
       value: '-10%'
     },
     {
-      code: '600002',
-      name: '矿业',
+      code: '600231',
+      name: '凌钢股份',
       value: '-5%'
     },
     {
-      code: '600003',
-      name: '教育',
+      code: '600232',
+      name: '金鹰股份',
       value: '-0.5%'
     },
     {
-      code: '600004',
-      name: '科技',
+      code: '600233',
+      name: '大杨创世',
       value: '0.5%'
     },
     {
-      code: '600005',
-      name: '食品',
+      code: '600234',
+      name: '山水文化',
       value: '5%'
     },
     {
-      code: '600006',
-      name: '团购',
+      code: '600235',
+      name: '民丰特纸',
       value: '10%'
+    },
+    {
+      code: '600236',
+      name: '桂冠电力',
+      value: '5%'
     }
 
   ];
