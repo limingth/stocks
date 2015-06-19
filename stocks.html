@@ -39,9 +39,15 @@
           <h2>{{code}} {{name}}</h2>
 
           {{#if lessthanzero this}}
-          <p style="color:green"> {{value}} </p>
+            <div style="color:green">
+              {{> ionIcon icon="arrow-graph-down-left"}}
+              <p style="color:green"> {{value}} </p>
+            </div>
           {{else}}
-          <p style="color:red"> {{value}} </p>
+            <div style="color:red">
+              {{> ionIcon icon="arrow-graph-up-right"}}
+              <p style="color:red"> {{value}} </p>
+            </div>
           {{/if}}
 
         {{/ionItem}}
