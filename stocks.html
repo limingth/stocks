@@ -23,7 +23,15 @@
 
   {{#ionView}}
     {{#ionContent}}
-    {{> esInput index="stocks" placeholder="Search..." }}
+    <div class="list">
+      <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+          {{> ionIcon icon="ios-search" class="placeholder-icon"}}
+          {{> esInput index="stocks" placeholder="输入股票代码搜索股票" }}
+        </label>
+      </div>
+    </div>
+
     {{#ionList}}
       {{#esEach index="stocks"}}
 
