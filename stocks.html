@@ -1,0 +1,24 @@
+<head>
+  <title>stock</title>
+</head>
+
+<body>
+  <h1>额滴股神!</h1>
+
+  {{> searchBox}}
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+</template>
+
+<template name="searchBox">
+    {{> esInput index="stocks" placeholder="Search..." }}
+
+    <ul>
+        {{#esEach index="stocks"}}
+            <li> {{name}} {{code}}, {{value}}</li>
+        {{/esEach}}
+    </ul>
+</template>
