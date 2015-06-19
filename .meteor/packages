@@ -8,4 +8,8 @@ meteor-platform
 autopublish
 insecure
 matteodem:easy-search
-twbs:bootstrap
+iron:router
+fourseven:scss@2.0.0
+meteoric:ionic-sass
+meteoric:ionicons-sass
+meteoric:ionic
