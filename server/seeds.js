@@ -296,6 +296,8 @@ Meteor.startup(function() {
         code: stock.code,
         name: stock.name,
         value: stock.value,
+        gujia: 0,
+        delta: 0
       });
     });
   }
