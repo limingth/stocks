@@ -31,6 +31,9 @@ Template.searchBox.helpers({
   },
   parseValue: function(value) {
     return value.toFixed(2) + "%";
+  },
+  parseDelta: function(value) {
+    return value.toFixed(2);
   }
 });
 

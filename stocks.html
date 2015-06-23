@@ -42,14 +42,14 @@
             <div style="color:green">
               {{> ionIcon icon="arrow-graph-down-left"}}
               <span class="stock-stats">
-                <p style="color:green"> {{gujia}} | {{parseValue value}} | {{delta}} </p>
+                <p style="color:green"> {{gujia}} | {{parseValue value}} | {{parseDelta delta}} </p>
               </span>
             </div>
           {{else}}
             <div style="color:red">
               {{> ionIcon icon="arrow-graph-up-right"}}
               <span class="stock-stats">
-                <p style="color:red"> {{gujia}} | {{parseValue value}} | {{delta}} </p>
+                <p style="color:red"> {{gujia}} | {{parseValue value}} | {{parseDelta delta}} </p>
               </span>
             </div>
           {{/if}}
