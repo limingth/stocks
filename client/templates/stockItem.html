@@ -1,0 +1,21 @@
+<template name="stockItem">
+  {{#ionItem iconLeft=true iconRight=true}}
+    <h2>{{code}} {{name}}</h2>
+
+    {{#if lessthanzero this}}
+      <div style="color:green">
+        {{> ionIcon icon="arrow-graph-down-left"}}
+        <span class="stock-stats">
+          <p style="color:green"> {{gujia}} | {{parseValue value}} | {{parseDelta delta}} </p>
+        </span>
+      </div>
+    {{else}}
+      <div style="color:red">
+        {{> ionIcon icon="arrow-graph-up-right"}}
+        <span class="stock-stats">
+          <p style="color:red"> {{gujia}} | {{parseValue value}} | {{parseDelta delta}} </p>
+        </span>
+      </div>
+    {{/if}}
+  {{/ionItem}}
+</template>
